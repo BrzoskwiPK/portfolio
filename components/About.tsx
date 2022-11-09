@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import React from "react";
+import { urlFor } from "../sanity";
+import { PageInfo } from "../typings";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -15,7 +18,7 @@ const About = (props: Props) => {
         About
       </h3>
       <motion.img
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
+        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-[300px] xl:w-[500px] xl:h-[600px] mt-10 md:mt-0"
         initial={{
           x: -200,
           opacity: 0,
@@ -27,8 +30,8 @@ const About = (props: Props) => {
           x: 0,
           opacity: 1,
         }}
-        src="avatar2.jpg"
-        alt="Photo of the developer"
+        src={urlFor(pageInfo?.profilePic).url()}
+        alt={pageInfo?.name}
       />
 
       <div className="space-y-10 px-0 md:px-10">
@@ -37,16 +40,7 @@ const About = (props: Props) => {
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-base">
-          I'm Gabriel. You might know me as a sophomore based in Kraków, Poland.
-          I've been coding for over 6 years now. My favourite technologies are
-          React and TypeScript. Nevertheless I am also interested in backend,
-          that's why my commercial position is Full-stack Software Engineer. I
-          like building modern scalable applications that not only work well,
-          but also look decent. I love my job and feel extremely satisfied in
-          giving people what they need to promote their brand. Don't hesitate to
-          contact me if you want to reach something special together!
-        </p>
+        <p className="text-base">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );

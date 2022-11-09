@@ -13,4 +13,9 @@
         text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40
         hover:border-[#F7AB0A]/40
     }
+
+    .socialIcon:hover {
+        filter: invert(77%) sepia(9%) saturate(6136%) hue-rotate(352deg) brightness(96%) contrast(101%);
+        transition: filter 500ms linear;
+    }
 }
