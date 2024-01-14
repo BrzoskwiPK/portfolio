@@ -8,4 +8,4 @@ npm run dev
 yarn dev
 ```
 
-LIVE DEMO: https://brzoskwiniagabriel.vercel.app/
+WATCH LIVE DEMO: https://brzoskwiniagabriel.vercel.app/
