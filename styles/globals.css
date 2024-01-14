@@ -2,20 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .heroButton {
-        @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs
-        tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40
-    }
-    
-    .contactInput {
-        @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424]
-        text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40
-        hover:border-[#F7AB0A]/40
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .socialIcon:hover {
-        filter: invert(77%) sepia(9%) saturate(6136%) hue-rotate(352deg) brightness(96%) contrast(101%);
-        transition: filter 500ms linear;
-    }
+@layer components {
+  .heroButton {
+    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs
+        tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
+  }
+
+  .contactInput {
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424]
+        text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40
+        hover:border-[#F7AB0A]/40;
+  }
+
+  .socialIcon:hover {
+    filter: invert(77%) sepia(9%) saturate(6136%) hue-rotate(352deg) brightness(96%) contrast(101%);
+    transition: filter 500ms linear;
+  }
 }
