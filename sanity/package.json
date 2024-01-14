@@ -6,6 +6,9 @@
   "main": "package.json",
   "author": "Gabriel Brzoskwinia <brzoskwinia.gabriel@gmail.com>",
   "license": "UNLICENSED",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "sanity start",
     "build": "sanity build"
